@@ -1,0 +1,18 @@
+<div class="custom-container">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate class="custom-form">
+        <h2 class="text-center mb-4">EDITAR</h2>
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input formControlName="title" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">URL</label>
+            <input formControlName="url" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">descripcion</label>
+            <input formControlName="descripcion" type="text" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">EDITAR</button>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+.footer {
+    background-color: #000; /* Fondo negro */
+    padding: 20px 0;
+    background: linear-gradient(to bottom #5d5b5f, #d4d7da); 
+}
+
+.footer h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #7cda69; /* Color verde al pasar el ratón */
+}
+
+.footer .fab {
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .fab:hover {
+    color: #7cda69; /* Color verde al pasar el ratón sobre los íconos */
+}

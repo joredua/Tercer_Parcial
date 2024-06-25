@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-items-center vh-100 custom-background">
+    <div class="card p-4 shadow-lg custom-card">
+        <h2 class="text-center mb-4">CREAR</h2>
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input formControlName="title" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">URL</label>
+                <input formControlName="url" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descripcion</label>
+                <input formControlName="descripcion" type="text" class="form-control" required>
+            </div>
+            <button [disabled]="!postForm.valid" type="submit" class="btn btn-primary w-100">Store</button>
+        </form>
+    </div>
+</div>
+

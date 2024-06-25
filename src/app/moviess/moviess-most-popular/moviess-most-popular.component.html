@@ -1,0 +1,10 @@
+<h2>Mas Populares</h2>
+
+<div class="list-movies">
+    <div *ngFor="let moviess of listaMoviess; let i = index;">
+        <img  (click)="deleteMovies(i)" src="https://image.tmdb.org/t/p/w220_and_h330_face/{{moviess.poster_path}}" alt="">
+        <p>{{ moviess.title}}</p>
+        <p>Fecha: {{moviess.release_date | date :'dd-LLLL-yyyy'}}</p>
+    </div>
+   
+</div>

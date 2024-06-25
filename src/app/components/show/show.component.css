@@ -1,0 +1,22 @@
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4px;
+  }
+  
+  .table-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Ajusta esto según tus necesidades */
+  }
+  
+  .table {
+    margin: 40px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    
+  }

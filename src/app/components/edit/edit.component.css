@@ -1,0 +1,15 @@
+.custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom,#ff3cac, #784ba0, #2b86c5); 
+}
+
+.custom-form {
+    background-color: #444; /* Fondo del formulario */
+    padding: 20px;
+    border: 2px solid #800080; /* Borde violeta */
+    border-radius: 10px;
+    color: #fff; /* Color de texto blanco */
+}

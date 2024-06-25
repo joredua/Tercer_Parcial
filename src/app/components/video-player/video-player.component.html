@@ -1,0 +1,21 @@
+<h1 class="text-center shadow-text">PELICULAS DISPONIBLES</h1>
+<div class="container d-flex flex-column align-items-center">
+  <div class="input-group mb-4">
+    <div class="form-outline" data-mdb-input-init>
+      <label class="form-label" for="form1">BUSCADOR</label>
+      <input id="search-input" type="search" id="form1" class="form-control" />
+    </div>
+    <button id="search-button" type="button" class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+  <div class="card bg-dark text-white text-center">
+    <div class="card-body p-4 d-flex flex-column justify-content-center align-items-center">
+      <h1>{{ title }}</h1>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" [src]="url" allowfullscreen></iframe>
+      </div>
+      <p>{{ descripcion }}</p>
+    </div>
+  </div>
+</div>

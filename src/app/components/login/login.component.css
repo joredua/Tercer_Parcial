@@ -1,0 +1,109 @@
+.wrapper {
+    background: linear-gradient(to bottom,#ff3cac, #784ba0, #2b86c5); 
+    height: 100vh; /* Ajusta la altura según tu diseño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Importante para el posicionamiento de los spans */
+    overflow: hidden; /* Para evitar que las partículas se salgan del contenedor */
+}
+
+.body {
+    background-color: #575656; /* Fondo blanco del formulario */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    width: 100%; /* O ajusta el ancho según tu diseño */
+    max-width: 400px; /* Ancho máximo del formulario */
+    text-align: center;
+}
+
+.errorLabel {
+    font-size: 12px;
+    color: #dc3545;
+}
+
+.wrapper span {
+    position: absolute; /* Cambiado a absolute para que sean fijos dentro del wrapper */
+    bottom: -50px; /* Ajusta la posición inicial */
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    background-color: #f02906;
+    border-radius: 50%; /* Borde redondeado */
+    animation: animate 10s linear infinite;
+}
+
+.wrapper span:nth-child(1) {
+    left: 60%;
+    animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2) {
+    left: 60%;
+    animation-delay: 3s;
+    width: 60px;
+    height: 60px;
+}
+
+.wrapper span:nth-child(3) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4) {
+    left: 30%;
+    animation-delay: 5s;
+    width: 80px;
+    height: 80px;
+}
+
+.wrapper span:nth-child(5) {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.wrapper span:nth-child(6) {
+    left: 50%;
+    animation-delay: 7s;
+}
+
+.wrapper span:nth-child(7) {
+    left: 60%;
+    animation-delay: 6s;
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper span:nth-child(8) {
+    left: 70%;
+    animation-delay: 8s;
+}
+
+.wrapper span:nth-child(9) {
+    left: 80%;
+    animation-delay: 6s;
+    width: 90px;
+    height: 90px;
+}
+
+.wrapper span:nth-child(10) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-2000px) rotate(1440deg);
+        opacity: 0;
+    }
+}

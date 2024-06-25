@@ -1,0 +1,25 @@
+.wrapper {
+    background: linear-gradient(to bottom,#ff3cac, #784ba0, #2b86c5); 
+    height: 100vh; /* O ajusta la altura según tu diseño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.body {
+    background-color: #535151; /* Fondo blanco del formulario */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    width: 100%; /* O ajusta el ancho según tu diseño */
+    max-width: 400px; /* Ancho máximo del formulario */
+    text-align: center;
+}
+
+
+.errorLabel {
+    font-size: 12px;
+}
+
+/* Estilos adicionales según necesites */

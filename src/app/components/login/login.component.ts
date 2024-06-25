@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/services/firebase-code-error.service';
+import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.loginUsuario = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
-    })
+    });
   }
 
   ngOnInit(): void {}
@@ -35,7 +36,8 @@ export class LoginComponent implements OnInit {
 
     this.loading = true;
     this.afAuth.signInWithEmailAndPassword(email, password).then((user) => {
-      if(user.user?.emailVerified) {
+      this.loading = false;
+      if (user.user?.emailVerified) {
         this.router.navigate(['/dashboard']);
       } else {
         this.router.navigate(['/verificar-correo']);
@@ -43,6 +45,17 @@ export class LoginComponent implements OnInit {
     }).catch((error) => {
       this.loading = false;
       this.toastr.error(this.firebaseError.codeError(error.code), 'Error');
-    })
+    });
+  }
+
+  loginWithGoogle() {
+    this.loading = true;
+    this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((result) => {
+      this.loading = false;
+      this.router.navigate(['/dashboard']);
+    }).catch((error) => {
+      this.loading = false;
+      this.toastr.error(this.firebaseError.codeError(error.code), 'Error');
+    });
   }
 }
