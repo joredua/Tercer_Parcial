@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0975e0; /* Blanco */
+  }
+  
+  .table-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
+    padding: 20px 40px;
+    border-radius: 10px;
+  }
+  
+  .table th, .table td {
+    color: #e90fe9; /* Blanco */
+  }
+  
+  .loading {
+    text-align: center;
+    color: #e40a9b; /* Blanco */
+  }
+  

@@ -1,3 +1,7 @@
+
+.container{
+  background: linear-gradient(to bottom, #239456, #DBC9F5);
+}
 .table-container {
     display: flex;
     justify-content: center;

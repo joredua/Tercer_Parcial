@@ -14,6 +14,14 @@ import { MoviessTopComponent } from './moviess/moviess-top/moviess-top.component
 import { MoviesComponent } from './components/movies/movies.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { UserViewComponent } from './components/user-view/user-view.component';
+import { PeliculasComponent } from './components/peliculas/peliculas.component';
+import { SearchComponent } from './pages/search/search.component';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/admin.guard';
+import { ListUsersComponent } from './components/list-users/list-users.component';
+import { RoleGuard } from './guards/role.guard';
 
 
 const routes: Routes = [
@@ -23,8 +31,8 @@ const routes: Routes = [
   { path: 'registrar-usuario', component: RegistrarUsuarioComponent },
   { path: 'verificar-correo', component: VerificarCorreoComponent },
   { path: 'recuperar-password', component: RecuperarPasswordComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'show', component: ShowComponent},
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'show', component: ShowComponent,canActivate: [AuthGuard, RoleGuard],data: { expectedRole: 'admin' }},
   { path: 'create', component: CreateComponent},
   { path: 'edit/:id', component: EditComponent},
   { path: 'video-player', component: VideoPlayerComponent },
@@ -32,6 +40,11 @@ const routes: Routes = [
   { path: 'user-view', component: UserViewComponent },
   { path: 'moviess-top', component: MoviessTopComponent },
   { path: 'movies', component: MoviesComponent },
+  { path: 'peliculas', component: PeliculasComponent},
+  { path: 'search', component: SearchComponent},
+  { path: 'movie/:id', component: MovieDetailsComponent},
+  { path: 'home', component: HomeComponent},
+  { path: 'list-users', component: ListUsersComponent, canActivate: [AuthGuard, RoleGuard], data: { expectedRole: 'admin' }},
   { path: '**', redirectTo: 'portada', pathMatch: 'full' }, // Ruta comodín para manejar rutas no definidas
 ];
 

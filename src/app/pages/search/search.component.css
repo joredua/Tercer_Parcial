@@ -1,0 +1,28 @@
+.contain {
+    background: linear-gradient(to bottom, #4E2394, #DBC9F5); margin: 0; height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+button
+{
+    background-color: #09d6e5;
+    color: #ffffff;
+}
+
+button:hover
+{
+    background-color: #E50914;
+    color: #ffffff;
+}
+
+img{
+    width: 100%;
+    cursor: pointer;
+}
+
+h5
+{
+    color: #ffffff;
+}

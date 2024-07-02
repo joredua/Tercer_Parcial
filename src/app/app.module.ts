@@ -37,6 +37,12 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
 import { UserViewComponent } from './components/user-view/user-view.component';
 import { AuthService } from './auth.service';
 import { VideoService } from './components/video-player/video.servicio';
+import { PeliculasComponent } from './components/peliculas/peliculas.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SearchComponent } from './pages/search/search.component';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { MovieApiServiceService } from './service/movie-api-service.service';
+import { ListUsersComponent } from './components/list-users/list-users.component';
 
 //importar las clases de trabajo de firestore
 
@@ -60,7 +66,12 @@ import { VideoService } from './components/video-player/video.servicio';
     MoviessMostPopularComponent,
     MoviessTopComponent,
     VideoPlayerComponent,
-    UserViewComponent
+    UserViewComponent,
+    PeliculasComponent,
+    HomeComponent,
+    SearchComponent,
+    MovieDetailsComponent,
+    ListUsersComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +86,7 @@ import { VideoService } from './components/video-player/video.servicio';
     AngularFirestoreModule,
     HttpClientModule
   ],
-  providers: [AuthService, VideoService],
+  providers: [AuthService, VideoService,MovieApiServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

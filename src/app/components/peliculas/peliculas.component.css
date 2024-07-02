@@ -1,0 +1,18 @@
+/*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+}*/
+.navbar .navbar-brand{
+  color: rgb(32, 236, 134);
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color:rgb(32, 236, 134);
+    
+}

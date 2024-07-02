@@ -1,0 +1,26 @@
+<h1>USUARIOS REGISTRADOS</h1>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="!loading && users.length === 0">No users found.</div>
+<div *ngIf="!loading && users.length > 0" class="table-container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><i class="fa-solid fa-envelope-circle-check"></i>Email</th>
+        <th><i class="fa-solid fa-hand-sparkles"></i>Role</th>
+        <th><i class="fa-solid fa-person-rays"></i>Nombre</th>
+        <th><i class="fa-solid fa-person-rays"></i>Apellido</th>
+        <th><i class="fa-solid fa-medal"></i>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.nombre }}</td>
+        <td>{{ user.apellido }}</td>
+        <td>{{ user.edad }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,37 +1,38 @@
+<div class="container">
+  <div class="gap-2 mt-4 text-center">
+    <a routerLink="/create" class="btn btn-primary" type="button">Create</a>
+  </div>
 
-<div class="gap-2 mt-4 text-center">
-  <a routerLink="/create" class="btn btn-primary" type="button">Create</a>
+  <div class="table-container">
+    <table class="table table-hover table-striped">
+      <thead class="bg-dark text-white text-center">
+        <tr>
+          <th>Title</th>
+          <th>URL</th>
+          <th>Descripcion</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of Posts" class="text-center">
+          <td>{{ post.title }}</td>
+          <td>{{ post.url }}</td>
+          <td>{{ post.descripcion }}</td>
+          <td>
+            <button [routerLink]="['/edit', post.id]" class="btn btn-outline-secondary">
+              Edit <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button (click)="deleteRow(post.id)" class="btn btn-outline-danger">
+              Delete <i class="fa-solid fa-trash"></i>
+            </button>
+            <a [routerLink]="['/video-player']"
+              [queryParams]="{title: post.title, url: post.url, descripcion: post.descripcion}"
+              class="btn btn-outline-primary">
+              View <i class="fa-solid fa-eye"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-<div class="table-container">
-  <table class="table table-hover table-striped">
-    <thead class="bg-dark text-white text-center">
-      <tr>
-        <th>Title</th>
-        <th>URL</th>
-        <th>Descripcion</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let post of Posts" class="text-center">
-        <td>{{ post.title }}</td>
-        <td>{{ post.url }}</td>
-        <td>{{ post.descripcion }}</td>
-        <td>
-          <button [routerLink]="['/edit', post.id]" class="btn btn-outline-secondary">
-            Edit <i class="fa-solid fa-pen-to-square"></i>
-          </button>
-          <button (click)="deleteRow(post.id)" class="btn btn-outline-danger">
-            Delete <i class="fa-solid fa-trash"></i>
-          </button>
-          <a [routerLink]="['/video-player']" [queryParams]="{title: post.title, url: post.url, descripcion: post.descripcion}" class="btn btn-outline-primary">
-            View <i class="fa-solid fa-eye"></i>
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-

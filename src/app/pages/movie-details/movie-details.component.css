@@ -1,0 +1,33 @@
+.contain {
+    background: linear-gradient(to bottom, #360f0f, #130a0a); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+img{
+    width: 100%;
+    height: auto;
+}
+
+h1
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+p{
+    color: #ffffff;
+}
+
+a{
+    background-color: #E50914;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #E50914;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
